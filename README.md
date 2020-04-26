@@ -1,2 +1,1 @@
 # RStudio.AppImage
-# RStudio.AppImage
