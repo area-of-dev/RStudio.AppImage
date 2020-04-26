@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=RStudio
+Comment=RStudio is a set of integrated tools designed to help you be more productive with R.
+Exec=AppRun %U
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=rstudio
+Categories=Science;Education;
+StartupWMClass=rstudio
+StartupNotify=true
