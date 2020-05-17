@@ -10,8 +10,8 @@ all:
 	tar -zxvf $(DESTINATION)
 	rm -rf AppDir/opt
 	
-	wget --continue https://rpmfind.net/linux/opensuse/distribution/leap/15.2/repo/oss/x86_64/libopenssl1_0_0-1.0.2p-lp152.7.21.x86_64.rpm
-	rpm2cpio libopenssl1_0_0-1.0.2p-lp152.7.21.x86_64.rpm | cpio -idmv
+	wget --output-document=openssl-1.0.rpm --continue http://mirror.centos.org/centos/7/os/x86_64/Packages/openssl-1.0.2k-19.el7.x86_64.rpm
+	rpm2cpio openssl-1.0.rpm | cpio -idmv
 	
 	mkdir --parents AppDir/rstudio
 	mkdir --parents AppDir/lib
