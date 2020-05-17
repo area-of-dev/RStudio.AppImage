@@ -10,7 +10,7 @@ all:
 	tar -zxvf $(DESTINATION)
 	rm -rf AppDir/opt
 	
-	wget --output-document=openssl-1.0.rpm --continue http://mirror.centos.org/centos/7/os/x86_64/Packages/openssl-libs-1.0.2k-19.el7.x86_64.rpm
+	wget --output-document=openssl-libs-1.0.rpm --continue http://mirror.centos.org/centos/7/os/x86_64/Packages/openssl-libs-1.0.2k-19.el7.x86_64.rpm
 	rpm2cpio openssl-libs-1.0.rpm | cpio -idmv
 	
 	mkdir --parents AppDir/rstudio
