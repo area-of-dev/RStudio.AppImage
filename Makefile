@@ -15,7 +15,7 @@ all:
 	
 	mkdir --parents AppDir/rstudio
 	mkdir --parents AppDir/lib
-	cp -r rstudio-1.2.5042/* AppDir/rstudio
+	cp -r rstudio-*/* AppDir/rstudio
 	cp -r usr/lib64/* AppDir/lib
 	
 
