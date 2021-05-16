@@ -9,7 +9,7 @@
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-SOURCE="https://download1.rstudio.org/desktop/trusty/amd64/rstudio-1.2.5042-amd64-debian.tar.gz"
+SOURCE="https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1106-amd64-debian.tar.gz"
 DESTINATION="build.tar.gz"
 OUTPUT="RStudio.AppImage"
 
@@ -26,9 +26,9 @@ all: clean
 
 	wget --output-document=build.rpm https://ftp.nluug.nl/pub/os/Linux/distr/pclinuxos/pclinuxos/apt/pclinuxos/64bit/RPMS.x86_64/lib64openssl1.0.0-1.1.0j-2pclos2019.x86_64.rpm
 	rpm2cpio build.rpm | cpio -idmv
-
-
-
+	
+	wget --output-document=build.rpm https://rpmfind.net/linux/centos/7.9.2009/os/x86_64/Packages/postgresql-libs-9.2.24-4.el7_8.x86_64.rpm
+	rpm2cpio build.rpm | cpio -idmv
 
 	mkdir --parents AppDir/rstudio
 	mkdir --parents AppDir/lib
@@ -42,7 +42,7 @@ all: clean
 
 clean:
 	rm -f $(DESTINATION)
-	rm -rf ./rstudio-1.2.5042
+	rm -rf ./rstudio-1.4.1106
 	rm -rf ./AppDir/rstudio
 	rm -rf ./AppDir/lib
 	rm -rf ./*.rpm
